@@ -80,6 +80,10 @@ h5 {
     max-height: 20%;
 }
 
+#guessContent {
+    font-size: x-large;
+    box-shadow: 0 0 5px#5a5a5a;
+}
 /* Navigation */
 
 .navbar {
