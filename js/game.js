@@ -65,7 +65,7 @@ const makeGuess = () => {
 
 const restartGame = () => {
   score = 20;
-  randomNum = Math.random() * 100 + 1;
+  randomNum = Math.floor(Math.random() * 100) + 1;
   scoreField.textContent = `Score: ${score}`;
   highScoreField.textContent = `High score: ${highScore}`;
   guessContent.textContent = 'Start!';
