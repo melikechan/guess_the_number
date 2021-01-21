@@ -81,9 +81,19 @@ h5 {
 }
 
 #guessContent {
-    font-size: x-large;
+    font-size: xx-large;
     box-shadow: 0 0 5px#5a5a5a;
+
 }
+
+#restart {
+    display: none;
+}
+
+button {
+    border-radius: 5%;
+}
+
 /* Navigation */
 
 .navbar {
