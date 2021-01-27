@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
 
 @media (max-width: 576px) {
     body {
@@ -53,8 +53,8 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-display: swap;
     overflow: auto;
+    font-display: swap;
     color: rgb(40, 40, 40);
 }
 
