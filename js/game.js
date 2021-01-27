@@ -2,14 +2,19 @@
 
 // TODO: Refactor the code to improve readability.
 
-const guessInput = document.getElementById('guessInput');
+// Buttons
 const guessButton = document.getElementById('submitButton');
+const restartButton = document.getElementById('restartButton');
+
+// Inputs
+const guessInput = document.getElementById('guessInput');
+
+// Fields (no user interaction particularly)
 const guessContent = document.getElementById('guessContent');
 const guessStatus = document.getElementById('guessStatus');
 const scoreField = document.getElementById('score');
 const highScoreField = document.getElementById('highScore');
 const restartField = document.getElementById('restart');
-const restartButton = document.getElementById('restartButton');
 
 let score = 20;
 let highScore = 0;
@@ -24,6 +29,11 @@ const initContent = () => {
 };
 
 const checkGuess = () => {
+  if (guess < 1 || guess > 100) {
+    guessStatus.textContent = 'Your input is too small or large!';
+    return;
+  }
+
   if (guess > randomNum) {
     guessStatus.textContent =
     'The number you guessed is higher than the actual one!';
@@ -58,9 +68,13 @@ const checkGameEnd = () => {
 };
 
 const makeGuess = () => {
-  guess = parseInt(guessInput.value);
-  checkGuess(guess);
-  checkGameEnd(score);
+  if (guessInput.value === '') {
+    guessStatus.textContent = 'Please enter a valid input!';
+  } else {
+    guess = parseInt(guessInput.value);
+    checkGuess(guess);
+    checkGameEnd(score);
+  }
 };
 
 const restartGame = () => {
